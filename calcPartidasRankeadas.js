@@ -1,3 +1,10 @@
+console.log("##############################################")
+console.log()
+console.log("Bem-vindo ao calculador de ranque")
+console.log()
+console.log("##############################################")
+console.log()
+
 function calcRank(vitoria, derrota) {
   return vitoria - derrota
 }
