@@ -10,12 +10,10 @@ console.log(valorViagem.toFixed(2));
 */
 
 const valorViagem = calcValorViagem(5.79, 50, 12);
+console.log(valorViagem);
 
 function calcValorViagem(precoCombustivel, distanciaPercorridaKM, kmPorLitros) {
   const litrosConsumidos = distanciaPercorridaKM / kmPorLitros;
   const resultado = litrosConsumidos * precoCombustivel;
-  return `Valor gasto na viagem ${resultado.toFixed(2)}`;
-};
-
-console.log(valorViagem);
-console.log(calcValorViagem(7.90, 100, 12));
+  return `Valor gasto na viagem foi: ${resultado.toFixed(2)}`;
+}
