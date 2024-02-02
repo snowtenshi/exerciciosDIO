@@ -20,4 +20,3 @@ function calcMediaNota(primeiraNota, segundaNota, terceiraNota) {
     console.log(`A média do aluno é: ${media.toFixed(1)} e o aluno passou na disciplina`);
   }
 }
-
