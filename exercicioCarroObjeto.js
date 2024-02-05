@@ -10,7 +10,7 @@ class Carro {
   }
 
   calcularViagem(distanciaEmKM, precoCombustivel) {
-    return (distanciaEmKM * this.gastoMedioPorKM * precoCombustivel).toFixed(3);
+    return `O valor gasto nessa viagem com o carro ${this.modelo} é R$${(distanciaEmKM * this.gastoMedioPorKM * precoCombustivel).toFixed(3)}`;
   }
 }
 
