@@ -1,12 +1,12 @@
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 360px) {
   .content-pokedex__list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (min-width: 576px) {
   .content-pokedex__list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
