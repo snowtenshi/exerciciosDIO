@@ -1,18 +1,4 @@
-const offset = 0;
-const limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 const pokedexList = document.getElementById('pokedex__list');
-
-fetch(url) 
-  .then((response) => response.json()) // Utilizando arrow functions p/ tornar o código mais conciso
-  .then((jsonBody) => jsonBody.results) // é possível colocar "debugger" p dubuggar código direto do terminal no navegador
-  .then((jsonBody) => {
-    for (let i = 0; i < jsonBody.length; i++) {
-      const pkmnName = jsonBody[i];
-      pokedexList.innerHTML += pokemonList(pkmnName);
-    }
-  })
-  .catch((error) => console.error(error));
 
 function pokemonList(pokemon) {
   return `
@@ -32,3 +18,11 @@ function pokemonList(pokemon) {
   `
 };
 
+
+// Essencialmente esse trecho está fazendo um loop com o map e adicionando ao array as informações
+// Que está no jsonBody dinamicamente a lista HTML de pokemonList
+// join por padrão separa os itens com uma vírgula, por isso a string vazia
+
+pokeAPI.getPokemons()
+  .then((jsonBody = []) => pokedexList.innerHTML += jsonBody.map(pokemonList).join('') 
+);
