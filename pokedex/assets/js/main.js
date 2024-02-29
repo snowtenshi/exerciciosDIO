@@ -19,8 +19,8 @@ function pokemonList(pokemon) {
 };
 
 
-// Essencialmente esse trecho está fazendo um loop com o map e adicionando ao array as informações
-// Que está no jsonBody dinamicamente a lista HTML de pokemonList
+// Essencialmente esse trecho está fazendo um loop com o map e transformando as informações do array
+// Que está no jsonBody dinamicamente em uma lista HTML de pokemonList
 // join por padrão separa os itens com uma vírgula, por isso a string vazia
 
 pokeAPI.getPokemons()
