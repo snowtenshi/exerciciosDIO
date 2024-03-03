@@ -2,11 +2,27 @@
 
 const pokeAPI = {}; // pokeAPI é um objeto vazio que receberá métodos
 
+function convertPokemonModel(pokeDetail) {
+  const pokemon = new Pokemon();
+  pokemon.pkmnNumber = pokeDetail.order;
+  pokemon.pkmnName = pokeDetail.name;
+
+  const types = pokeDetail.types.map((typesSlot) => typesSlot.type.name)
+  const [type] = types
+  
+  pokemon.pkmnTypes = types
+  pokemon.pkmnMainType = type
+  pokemon.pkmnSprite = pokeDetail.sprites.front_default;
+  return pokemon;
+} 
+
 pokeAPI.getPokemonDetails = (pokemon) => {
-  return fetch((pokemon.url)).then((response) => response.json());
+  return fetch((pokemon.url))
+    .then((response) => response.json())
+    .then(convertPokemonModel)
 }
 
-pokeAPI.getPokemons = (offset = 0, limit = 12) => {
+pokeAPI.getPokemons = (offset = 905, limit = 12) => {
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
   
   return fetch(url) 
