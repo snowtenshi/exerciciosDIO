@@ -1,16 +1,19 @@
 const pokedexList = document.getElementById('pokedex__list');
 
+function pokemonsTypesList(pokemonTypes) {
+  return pokemonTypes.map((typesSlot) => `<li class="type">${typesSlot.type.name}</li>`)
+}
+
 function pokemonList(pokemon) {
   return `
     <li class="content-pokedex__pokemon">
-    <span class="content-pokedex__pokemonNumber">#001</span>
+    <span class="content-pokedex__pokemonNumber">#${pokemon.order}</span>
     <span class="content-pokedex__pokemonName">${pokemon.name}</span>
       <div class="content-pokedex__pokemonData">
         <ol class="content-pokedex__pokemonType">
-          <li class="type">Grass</li>
-          <li class="type">Poison</li>
+            ${pokemonsTypesList(pokemon.types).join('')}
         </ol>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" 
+        <img src="${pokemon.sprites.front_default}" 
           alt="${pokemon.name}">
       </div>
     </li>
