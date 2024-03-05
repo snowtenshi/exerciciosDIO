@@ -7,8 +7,10 @@ body {
 }
 
 #content-pokedex__title {
-  margin: 0 0 5px 5px;
-  padding: 0 0 5px 15px;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .content-pokedex__list {
