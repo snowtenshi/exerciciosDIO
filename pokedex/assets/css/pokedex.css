@@ -31,14 +31,14 @@ body {
   flex-direction: column;
   margin: .5rem;
   padding: 1rem;
-  background-color: #bfffbf;
   border: none;
   border-radius: 1rem;
-  color: #007d00;
+  color: rgb(15, 15, 15);
   height: 10rem;
 }
 
 .content-pokedex__pokemonName {
+  text-transform: capitalize;
   margin: .25rem 0;
 }
 
@@ -73,10 +73,12 @@ body {
   margin: .25rem 0;
   padding: .25rem .5rem;
   font-size: .625em;
+  text-align: center;
+  text-transform: uppercase;
   color: #014301;
-  background-color: #7bfb7b;
   border: none;
   border-radius: 10px;
+  filter:brightness(1.1)
 }
 
 .buttons {
@@ -96,4 +98,76 @@ body {
   color: whitesmoke;
   border-radius: 4px;
   padding: .255rem;
+}
+
+.normal {
+  background-color: #fafacb;
+}
+
+.grass {
+  background-color: #bfffbf;
+}
+
+.fire {
+  background-color: #f88d8d;
+}
+
+.water {
+  background-color: #bfd2ff;
+}
+
+.electric {
+  background-color: #fcfc60;
+}
+
+.ice {
+  background-color: #bffffc;
+}
+
+.ground {
+  background-color: #f2cd6f;
+}
+
+.flying {
+  background-color: #c7c6f4;
+}
+
+.poison {
+  background-color: #fdbfff;
+}
+
+.fighting {
+  background-color: #f99b64;
+}
+
+.psychic {
+  background-color: #f996e5;
+}
+
+.dark {
+  background-color: #3a3a3a;
+}
+
+.rock {
+  background-color: #ac9676;
+}
+
+.bug {
+  background-color: #ceef68;
+}
+
+.ghost {
+  background-color: #58567e;
+}
+
+.steel {
+  background-color: #838983;
+}
+
+.dragon {
+  background-color: #6a6cf2;
+}
+
+.fairy {
+  background-color: #f8c1d3;
 }

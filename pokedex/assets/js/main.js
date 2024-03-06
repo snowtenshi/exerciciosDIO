@@ -11,7 +11,7 @@ function pokemonList(pokemon) {
     <span class="content-pokedex__pokemonName">${pokemon.pkmnName}</span>
       <div class="content-pokedex__pokemonData">
         <ol class="content-pokedex__pokemonType">
-            ${pokemon.pkmnTypes.map((type) => `<li class="type">${type}</li>`).join('')}
+            ${pokemon.pkmnTypes.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
         </ol>
         <img src="${pokemon.pkmnSprite}" 
           alt="${pokemon.pkmnName}">

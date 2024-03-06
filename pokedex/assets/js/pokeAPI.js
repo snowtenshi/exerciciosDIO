@@ -4,7 +4,7 @@ const pokeAPI = {}; // pokeAPI é um objeto vazio que receberá métodos
 
 function convertPokemonModel(pokeDetail) {
   const pokemon = new Pokemon();
-  pokemon.pkmnNumber = pokeDetail.order;
+  pokemon.pkmnNumber = pokeDetail.id;
   pokemon.pkmnName = pokeDetail.name;
 
   const types = pokeDetail.types.map((typesSlot) => typesSlot.type.name)
