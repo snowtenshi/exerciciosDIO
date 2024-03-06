@@ -78,3 +78,22 @@ body {
   border: none;
   border-radius: 10px;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn-prev {
+  margin: 0 15px 0 0px;
+}
+
+#btn-prev, #btn-next {
+  background-color: rgb(24, 23, 23);
+  font-size: large;
+  color: whitesmoke;
+  border-radius: 4px;
+  padding: .255rem;
+}
